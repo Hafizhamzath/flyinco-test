@@ -1,0 +1,146 @@
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+body.dark .profile-button {
+  color: #9ca3af;
+}
+
+.profile-button:hover {
+  background-color: #f3f4f6;
+}
+
+body.dark .profile-button:hover {
+  background-color: #374151;
+}
+
+.profile-avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .profile-name {
+    display: block;
+  }
+}
+
+.profile-chevron {
+  margin-left: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  width: 192px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  padding: 4px 0;
+}
+
+body.dark .dropdown-menu {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dropdown-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark .dropdown-header {
+  border-color: #374151;
+}
+
+.dropdown-header .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+body.dark .dropdown-header .name {
+  color: #ffffff;
+}
+
+.dropdown-header .email {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+body.dark .dropdown-header .email {
+  color: #d1d5db;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+body.dark .dropdown-item {
+  color: #d1d5db;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+body.dark .dropdown-item:hover {
+  background-color: #374151;
+}
+
+.dropdown-item.logout {
+  color: #dc2626;
+}
+
+body.dark .dropdown-item.logout {
+  color: #f87171;
+}
+
+.dropdown-item.logout:hover {
+  background-color: #fee2e2;
+}
+
+body.dark .dropdown-item.logout:hover {
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+.icon {
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+}

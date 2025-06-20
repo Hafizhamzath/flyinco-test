@@ -1,0 +1,118 @@
+.sidebar {
+  position: fixed;
+  inset-y: 0;
+  left: 0;
+  width: 256px;
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+}
+
+html.dark .sidebar {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    position: static;
+    transform: translateX(0);
+    box-shadow: none;
+  }
+
+  .sidebar-overlay {
+    display: none;
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+html.dark .sidebar-header {
+  border-color: #374151;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  height: 32px;
+  width: 32px;
+  color: #2563eb;
+}
+
+.brand-name {
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: serif;
+}
+
+.sidebar-close-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  color: #9ca3af;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar-close-btn:hover {
+  background-color: #f3f4f6;
+}
+
+html.dark .sidebar-close-btn:hover {
+  background-color: #374151;
+}
+
+.sidebar-nav {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #f3f4f6;
+}
+
+html.dark .sidebar-item:hover {
+  background-color: #374151;
+}
+
+.sidebar-item.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.sidebar-icon {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
