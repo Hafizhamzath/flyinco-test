@@ -1,0 +1,106 @@
+.cars-page {
+  padding: 1.5rem;
+}
+
+/* Consistent text and color theming */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-muted-foreground {
+  color: var(--color-muted);
+}
+
+/* Shared ghost button styling */
+.ghost-btn {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+/* Flex utility for aligning icon with text */
+.flex.items-center {
+  display: flex;
+  align-items: center;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* Uniform header size */
+.column-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 140px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal content styling */
+.modal-content {
+  position: relative;
+  background: white;
+  color: #1f2937; /* dark gray text */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Subtle Flyinco logo as background */
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/logo.png'); /* Update this path if needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+/* Ensure content sits above the background image */
+.modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.modal-content h2 {
+  color: #111827; /* dark heading */
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+/* Close button */
+.close-btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}

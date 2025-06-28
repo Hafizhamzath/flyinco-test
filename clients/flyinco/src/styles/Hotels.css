@@ -1,0 +1,72 @@
+/* Top-level page spacing */
+.hotels-page { padding: 1.5rem; }
+
+/* Main heading and muted text */
+.text-primary { color: var(--color-primary); }
+.text-muted-foreground { color: var(--color-muted); }
+
+/* DataTableShell relies on shared styles */
+/* Add or override specific parts below */
+
+.ghost-btn {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.flex.items-center {
+  display: flex;
+  align-items: center;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.close-btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

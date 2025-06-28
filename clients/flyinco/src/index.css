@@ -1,0 +1,71 @@
+:root {
+  --color-bg: #f5f5f5;                 /* Light background */
+  --color-text: #23024D;              /* Deep purple text */
+  --color-sidebar-bg: #23024D;        /* Sidebar background */
+  --color-sidebar-text: #ffffff;      /* Sidebar text */
+  --color-card-bg: #ffffff;           /* Light cards */
+  --color-primary: #6A2CA2;           /* Button/icon highlight */
+  --color-accent: #B180D7;            /* Hover, active states */
+  --color-border: #e0e0e0;            /* Light borders */
+  --color-topbar: #ffffff;
+}
+
+[data-theme='dark'] {
+  --color-bg: #1A1B26;                /* Dark blue-gray */
+  --color-text: #FAFAFA;              /* Soft white */
+  --color-sidebar-bg: #16161E;        /* Darker sidebar */
+  --color-sidebar-text: #FAFAFA;
+  --color-card-bg: #232430;           /* Slightly elevated cards */
+  --color-primary: #9D5BD2;           /* Brighter indigo */
+  --color-accent: #B388FF;            /* Lively purple hover */
+  --color-border: #3a3b4a;
+  --color-topbar: #2b2b3a;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Responsive layout handling LTR + RTL */
+.main-content {
+  transition: margin 0.3s ease;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+}
+
+.main-content.collapsed {
+  margin-left: 80px;
+}
+
+/* RTL Support */
+[data-dir='rtl'] .main-content {
+  margin-left: 0;
+  margin-right: 250px;
+}
+
+[data-dir='rtl'] .main-content.collapsed {
+  margin-left: 0;
+  margin-right: 80px;
+}
+
+.page-content {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  border-radius: 8px;
+}

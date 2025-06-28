@@ -1,0 +1,110 @@
+.visas-page {
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+/* Theming */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-muted-foreground {
+  color: var(--color-muted);
+}
+
+/* Column header */
+.column-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 140px;
+}
+
+/* Action button */
+.ghost-btn {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+/* Utility */
+.flex.items-center {
+  display: flex;
+  align-items: center;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* Modal overlay and content */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  color: #000000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Background logo inside modal */
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/logo.png'); /* Update path if needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Modal content text */
+.modal-content h2 {
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+/* Close button */
+.close-btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}

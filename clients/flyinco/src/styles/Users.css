@@ -1,0 +1,80 @@
+.users-page {
+  padding: 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.users-page h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.text-muted-foreground {
+  color: var(--color-text-muted, #666);
+  font-size: 0.95rem;
+}
+
+.column-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-card-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: flex-end;
+}
+
+.column-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.users-page {
+  padding: 1.5rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.text-muted-foreground {
+  color: var(--color-text-muted, #666);
+  font-size: 0.95rem;
+}
+
+.controls-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wide-search {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.filter-group select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+}
+
