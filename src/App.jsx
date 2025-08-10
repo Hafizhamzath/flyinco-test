@@ -15,34 +15,40 @@ import TravelCalendar from './components/admin/Travelcalender';
 import Layout from './components/corporate/Layout';
 import Home from './pages/corporate/Home'; // create this page if it doesn't exist
 
+// Login component
+import Login from './pages/corporate/Login'; // Make sure to create this page/component
 
 // Styles
-
 import './index.css';
 
-import  VisaApplicationForm  from './components/corporate/Forms/visa_application';
+
 import VisaPage from './pages/corporate/visa';
+import SignUpPage from './pages/corporate/Signin';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Login Route */}
+        <Route path="/login" element={<Login />} />
+        <Route path="signup" element={<SignUpPage />} />
+
         {/* Public (Corporate) Layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/visa" element={<VisaPage />} />
+          <Route path="visa" element={<VisaPage />} />
           {/* Add more public routes here */}
         </Route>
 
         {/* Admin Dashboard Layout */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/admin/users" element={<Users />} />
-          <Route path="/admin/flights" element={<Flights />} />
-          <Route path="/admin/hotels" element={<Hotels />} />
-          <Route path="/admin/cars" element={<Cars />} />
-          <Route path="/admin/visa" element={<Visas />} />
-          <Route path="/admin/calendar" element={<TravelCalendar />} />
+          <Route path="users" element={<Users />} />
+          <Route path="flights" element={<Flights />} />
+          <Route path="hotels" element={<Hotels />} />
+          <Route path="cars" element={<Cars />} />
+          <Route path="visa" element={<Visas />} />
+          <Route path="calendar" element={<TravelCalendar />} />
         </Route>
       </Routes>
     </BrowserRouter>

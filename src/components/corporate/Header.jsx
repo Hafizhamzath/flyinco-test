@@ -1,7 +1,6 @@
-// src/components/corporate/Header.jsx
 import { useState, useEffect } from "react";
 import { User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -42,17 +41,35 @@ const flags = {
 
 export default function Header() {
   const [currency, setCurrency] = useState("AED");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedCurrency = localStorage.getItem("currency");
     if (savedCurrency) {
       setCurrency(savedCurrency);
     }
+
+    // Check if user is logged in by looking for a token or flag in localStorage
+    const token = localStorage.getItem("authToken"); // example auth token
+    setIsLoggedIn(!!token);
   }, []);
 
   const handleCurrencyChange = (newCurrency) => {
     setCurrency(newCurrency);
     localStorage.setItem("currency", newCurrency);
+  };
+
+  const handleAuthClick = () => {
+    if (isLoggedIn) {
+      // Logout logic: clear token and update state
+      localStorage.removeItem("authToken");
+      setIsLoggedIn(false);
+      navigate("/"); // redirect to home on logout
+    } else {
+      // Redirect to login
+      navigate("/login");
+    }
   };
 
   return (
@@ -97,13 +114,14 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Sign In Button */}
+          {/* Sign In / Logout Button */}
           <Button
+            onClick={handleAuthClick}
             className="bg-[#2C1D74] hover:bg-[#241661] border border-[#2C1D74] text-white"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <User className="h-4 w-4 md:mr-2 text-white" />
-            <span className="hidden md:inline">Sign In</span>
+            <span className="hidden md:inline">{isLoggedIn ? "Logout" : "Sign In"}</span>
           </Button>
         </div>
       </div>
