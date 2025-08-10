@@ -1,6 +1,6 @@
 import React from "react";
-import  Header  from "../../components/corporate/Header";  // adjust path
-import { SignUpForm } from "../../components/corporate/auth/SignupForm"; // adjust path
+import  Header  from "../../../components/corporate/Header";  // adjust path
+import { SignUpForm } from "../../../components/corporate/auth/SignupForm"; // adjust path
 
 export default function SignUpPage() {
   return (

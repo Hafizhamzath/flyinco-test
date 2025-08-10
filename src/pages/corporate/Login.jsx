@@ -1,6 +1,6 @@
 import React from "react";
-import  Header  from "../../components/corporate/Header"; // adjust path as needed
-import { LoginForm } from "../../components/corporate/auth/LoginForm"; // adjust path as needed
+import  Header  from "../../../components/corporate/Header"; // adjust path as needed
+import { LoginForm } from "../../../components/corporate/auth/LoginForm"; // adjust path as needed
 
 export default function LoginPage() {
   return (

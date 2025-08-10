@@ -25,7 +25,7 @@ const Visas = () => {
   useEffect(() => {
     const fetchVisas = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/visas');
+        const response = await fetch('https://flyinco-test.onrender.com/api/visas');
         if (!response.ok) {
           throw new Error('Failed to fetch visa applications');
         }
